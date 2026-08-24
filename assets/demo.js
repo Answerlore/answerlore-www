@@ -1,10 +1,10 @@
 (function(){
   /* demo: type the question (Originkit type-sequence pattern), then reveal the answer */
   var QS = {
-    1: "Customer's unit shows code 49 and the bottom outdoor fan isn't spinning",
-    2: "Is code 18 a fault or normal protection?",
-    3: "Which capacities have two outdoor fans?",
-    4: "Draft a reply I can send about code 49"
+    1: "Customer has an X250 throwing E04 and the flow looks normal",
+    2: "Flow is down about 20% since winter. Is that a fault?",
+    3: "What pretreatment do we recommend for a site running above 5 NTU?",
+    4: "Draft a reply I can send about the E04"
   };
   var qtext = document.getElementById('qtext'),
       qcaret = document.getElementById('qcaret'),
