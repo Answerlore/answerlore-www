@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a walkthrough &mdash; Answerlore</title>
+<meta name="description" content="Thirty minutes with your own manual and your own questions, including the ones Answerlore should refuse. No slides.">
+<link rel="canonical" href="https://answerlore.com/walkthrough">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/mark-256.png">
+<meta property="og:title" content="Book a walkthrough &mdash; Answerlore">
+<meta property="og:description" content="Thirty minutes with your own manual and your own questions, including the ones Answerlore should refuse. No slides.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://answerlore.com/walkthrough">
+<meta property="og:site_name" content="Answerlore">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="site" aria-label="Site"><div class="wrap nav-in">
+  <a class="brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#1E4535" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+  <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a></div>
+  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+</div></nav>
+<main id="main">
+<div class="wrap pagehead">
+  
+  <h1>Thirty minutes, your manuals, no slides.</h1>
+  <p class="sub">Bring one real manual and five questions your desk answered this week. We'll load the manual live and let Answerlore take the questions, including the ones it should refuse.</p>
+</div><section><div class="wrap">
+<form class="form" id="walkthrough-form" data-subject="Answerlore: walkthrough request" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
+  <input type="hidden" name="subject" value="Answerlore: walkthrough request">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required></div>
+  <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Dealership or service company name" required></div>
+  <div class="field"><label for="equipment">What equipment do you support?</label><input id="equipment" name="equipment" type="text" placeholder="e.g., ag equipment, commercial kitchens, HVAC" required></div>
+  <div class="field"><label for="preload">Anything you want us to load in advance?</label><span class="hint">Optional. It makes the half hour count.</span><textarea id="preload" name="preload" placeholder="A manual, a brand, a question that keeps escalating"></textarea></div>
+  <button class="btn btn-primary" type="submit">Book the walkthrough</button>
+  <p class="form-note">We reply from hello@answerlore.com. Send a manual PDF with your reply if you want it pre-loaded.</p>
+  <p class="form-note" data-fallback hidden></p>
+</form>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+  <div class="foot-top">
+    <a class="brand foot-brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#F4F1E8" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+    <div class="foot-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/service">For service companies</a><a href="/dealers">For dealers</a><a href="/pricing">Pricing</a><a href="/your-data">Your data</a><a href="/resources">Resources</a><a href="/owners">For owners</a></div>
+  </div>
+  <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
+</div></footer>
+<script>
+(function(){
+  var PLACEHOLDER = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
+  var EMAIL = 'hello@answerlore.com';
+  document.querySelectorAll('form.form').forEach(function(f){
+    var key = f.querySelector('[name=access_key]');
+    var note = f.querySelector('[data-fallback]');
+    var live = key && key.value !== PLACEHOLDER;
+    if(!live && note){
+      note.hidden = false;
+      note.innerHTML = 'Form delivery isn\'t switched on yet. This button opens your email app ' +
+        'instead, pre-filled. Or write to <a href="mailto:' + EMAIL + '">' + EMAIL + '</a> directly.';
+    }
+    f.addEventListener('submit', function(ev){
+      if(live) return;                       /* real submission to Web3Forms */
+      ev.preventDefault();
+      var lines = [];
+      f.querySelectorAll('input[name], textarea[name]').forEach(function(el){
+        if(el.type === 'hidden' || el.type === 'checkbox' || !el.value) return;
+        var lab = f.querySelector('label[for="' + el.id + '"]');
+        lines.push((lab ? lab.textContent : el.name) + ': ' + el.value);
+      });
+      window.location.href = 'mailto:' + EMAIL +
+        '?subject=' + encodeURIComponent(f.dataset.subject) +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+  });
+})();
+</script>
+</body>
+</html>

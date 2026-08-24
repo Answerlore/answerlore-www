@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your data &mdash; Answerlore</title>
+<meta name="description" content="Where your manuals live, who can see them, and what we do with them. Single-tenant by construction, readable files you can export, and no SOC 2 badge we haven't earned.">
+<link rel="canonical" href="https://answerlore.com/your-data">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/mark-256.png">
+<meta property="og:title" content="Your data &mdash; Answerlore">
+<meta property="og:description" content="Where your manuals live, who can see them, and what we do with them. Single-tenant by construction, readable files you can export, and no SOC 2 badge we haven't earned.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://answerlore.com/your-data">
+<meta property="og:site_name" content="Answerlore">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="site" aria-label="Site"><div class="wrap nav-in">
+  <a class="brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#1E4535" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+  <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a></div>
+  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+</div></nav>
+<main id="main">
+<div class="wrap pagehead">
+  <span class="eyebrow">Your data</span>
+  <h1>Where your manuals live, who can see them, what we do with them.</h1>
+  <p class="sub">This page is written in plain language on purpose. If anything here is unclear, that's a defect: tell us.</p>
+</div>
+<div class="wrap" style="text-align:center;margin-top:-12px">
+  <span class="fine">Last updated 24 August 2026. We update this page when the facts change, not
+  annually.</span>
+</div>
+
+<section><div class="wrap">
+  <div class="prose"><span class="mlabel">Your own instance, structurally</span>
+  <p>Every client runs a separate, single-tenant instance of Answerlore. There is no shared filesystem
+     and no shared database between clients. Cross-client data contamination isn't prevented by a policy
+     we promise to follow; it's impossible by construction, because there is no shared place for it to
+     happen.</p></div>
+  <div class="stacks" style="margin-top:36px">
+    <div class="stack">
+      <h4>Your instance</h4>
+      <ul><li>Your manuals</li><li>Your knowledge base</li><li>Your technicians</li></ul>
+    </div>
+    <div class="gapline"><span class="bar"></span><span>no bridge</span><span class="bar"></span></div>
+    <div class="stack">
+      <h4>Another client's instance</h4>
+      <ul><li>Their manuals</li><li>Their knowledge base</li><li>Their technicians</li></ul>
+    </div>
+  </div>
+  <p class="fine" style="text-align:center;margin-top:18px">Nothing crosses the gap because there is no
+     bridge.</p>
+</div></section>
+
+<section><div class="wrap prose">
+  <span class="mlabel">Readable, not embedded</span>
+  <p>Your knowledge base is stored as human-readable text files, one topic per file, each carrying its
+     source manual, page range, and the date a human last verified it. Not an opaque vector database.
+     Open any file and read it. Correct a wrong answer by editing the sentence.</p>
+</div></section>
+
+<section><div class="wrap prose">
+  <span class="mlabel">You can leave, with everything</span>
+  <p>Export your entire knowledge base at any time, in the same readable files. If you cancel, we delete
+     your instance and confirm it. Your documented knowledge is an asset you keep, whoever you buy
+     software from next.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="prose"><span class="mlabel">What we don't do</span></div>
+  <div class="cards3" style="margin-top:24px">
+    <div class="cardi"><h3>No model training</h3>
+      <p>We don't train AI models on your documents.</p></div>
+    <div class="cardi"><h3>No outside systems</h3>
+      <p>We don't send your documents to any system outside your instance's processing path.</p></div>
+    <div class="cardi"><h3>No badge we haven't earned</h3>
+      <p>We don't have a SOC&nbsp;2 report yet. We're early, and we won't print a badge we haven't
+         earned. What we have instead is the architecture above, which you can audit, and this page,
+         which we keep true.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="prose"><span class="mlabel">Questions we expect from your IT person</span>
+  <p>Short answers, kept current with the implementation. If yours isn't here, ask and we'll add it.</p>
+  </div>
+  <div class="faq" style="margin-top:28px">
+    <div class="faq-item"><h3>Who at Answerlore can access an instance?</h3>
+      <p>The people running your deployment, for the work you've asked for. Access is per-instance,
+         not global.</p></div>
+    <div class="faq-item"><h3>Is data encrypted?</h3>
+      <p>In transit, yes, over TLS. At rest, your instance's storage is encrypted by the hosting
+         provider. Ask on a walkthrough and we'll name the provider and the region.</p></div>
+    <div class="faq-item"><h3>What's the model provider and the data-processing path?</h3>
+      <p>Your documents are processed to answer your team's questions and nothing else. We'll name the
+         current provider and sub-processors on request, in writing, and this page changes when they
+         change.</p></div>
+    <div class="faq-item"><h3>What are your backup and deletion timelines?</h3>
+      <p>Backups are taken for recovery, not retention. When you cancel, we delete your instance and
+         confirm the deletion to you.</p></div>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2>Bring your IT person to the walkthrough.</h2>
+  <p>Single-tenant architecture answers most compliance questions, and we would rather show you than promise you.</p>
+  <div class="cta-row"><a class="btn btn-onpine" href="/start">Try it on a real manual</a><a class="btn btn-ghost" href="/walkthrough">Book a walkthrough</a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+  <div class="foot-top">
+    <a class="brand foot-brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#F4F1E8" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+    <div class="foot-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/service">For service companies</a><a href="/dealers">For dealers</a><a href="/pricing">Pricing</a><a href="/your-data">Your data</a><a href="/resources">Resources</a><a href="/owners">For owners</a></div>
+  </div>
+  <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
+</div></footer>
+</body>
+</html>

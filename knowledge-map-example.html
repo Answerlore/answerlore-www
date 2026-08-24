@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A worked Knowledge Map &mdash; Answerlore</title>
+<meta name="description" content="A complete Knowledge Map for a fictional dealer, built from 40 synthetic tickets. Real arithmetic, invented company.">
+<link rel="canonical" href="https://answerlore.com/knowledge-map-example">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/mark-256.png">
+<meta property="og:title" content="A worked Knowledge Map &mdash; Answerlore">
+<meta property="og:description" content="A complete Knowledge Map for a fictional dealer, built from 40 synthetic tickets. Real arithmetic, invented company.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://answerlore.com/knowledge-map-example">
+<meta property="og:site_name" content="Answerlore">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="site" aria-label="Site"><div class="wrap nav-in">
+  <a class="brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#1E4535" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+  <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a></div>
+  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+</div></nav>
+<main id="main">
+<div class="wrap pagehead">
+  <span class="eyebrow">Worked example</span>
+  <h1>A Knowledge Map, start to finish.</h1>
+  <p class="sub">A complete map for a fictional dealer, built from 40 synthetic tickets. Real arithmetic, invented company. This is the artifact you keep after the first engagement.</p>
+</div>
+<section><div class="wrap prose">
+  <span class="mlabel">The inputs</span>
+  <p>40 tickets over four weeks and 20 business days, from a two-person support desk. 16 of the 40 were
+     escalated, a 40% escalation rate. Seven rankable categories, plus three one-offs.</p>
+  <p><b>Minutes lost is a derived figure, not a measurement.</b> It is the difference between how long
+     escalated tickets took and how long the same category took when the desk answered it alone, compared
+     within a category so the category's inherent difficulty cancels out.</p>
+</div></section>
+
+<section><div class="wrap">
+  <span class="mlabel" style="margin-bottom:20px">The ranking</span>
+  <div class="cmpscroll">
+  <table class="compare">
+    <thead><tr><th scope="col">Rank</th><th scope="col">Category</th><th scope="col">Tickets</th>
+      <th scope="col">Escalation rate</th><th scope="col">Minutes lost</th>
+      <th scope="col">Weekly minutes</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Warranty and coverage decisions</td><td>6</td><td>66.7%</td><td>96.0</td><td><b>96.0</b></td></tr>
+      <tr><td>2</td><td>Pressure fault E04 diagnosis</td><td>6</td><td>66.7%</td><td>78.0</td><td><b>78.0</b></td></tr>
+      <tr><td>3</td><td>Low flow rate, no error code</td><td>7</td><td>42.9%</td><td>60.0</td><td><b>45.0</b></td></tr>
+      <tr><td>4</td><td>RMA eligibility and process</td><td>4</td><td>50.0%</td><td>55.0</td><td><b>27.5</b></td></tr>
+      <tr><td>5</td><td>Firmware version questions</td><td>3</td><td>33.3%</td><td>44.0</td><td><b>11.0</b></td></tr>
+      <tr><td>6</td><td>Consumable replacement intervals</td><td>6</td><td>16.7%</td><td>36.0</td><td><b>9.0</b></td></tr>
+      <tr><td>7</td><td>Spec and dimension lookups</td><td>5</td><td>0.0%</td><td>0.0</td><td><b>0.0</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div></section>
+
+<section><div class="wrap prose">
+  <span class="mlabel">The finding</span>
+  <p>Spec and dimension lookups are 12.5% of ticket volume and 0% of escalation cost. Warranty decisions
+     are 15% of volume and 36% of escalation cost.</p>
+  <p>Ranking by frequency would have put spec lookups above RMA, firmware, and consumables in the
+     ingestion order. They cost nothing, because the desk already answers them from a datasheet. The
+     expensive questions are the ones the desk is not allowed to answer alone.</p>
+  <p>Troubleshooting and policy account for 246.5 of the 266.5 ranked weekly minutes, 93%. That is the
+     interrupt tax, and it is why troubleshooting and policies get ingested before product specs.</p>
+</div></section>
+
+<section><div class="wrap prose">
+  <span class="mlabel">What the data could not tell you</span>
+  <p>This section ships with the map, because a number without its limits is a guess.</p>
+  <p><b>Minutes lost is an upper bound</b> where escalated tickets are also harder tickets, which is
+     likely on warranty.</p>
+  <p><b>Four weeks cannot see seasonality.</b> The winter temperature derate drives low-flow volume that
+     this window under-represents, so rank 3 is probably understated.</p>
+  <p><b>Two of the low-flow escalations may be a firmware reporting artifact.</b> If so, part of rank 3's
+     cost belongs to rank 5, and rank 5 is understated.</p>
+  <p><b>Escalations were self-reported.</b> An escalation handled by walking to someone's desk leaves no
+     record, so the real rate is at or above 40%, not below it.</p>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2>Get your own version of this table.</h2>
+  <p>The Knowledge Map is the first engagement, and the map is yours whatever you decide next. <a class="quiet" href="/pricing" style="color:inherit;text-decoration:underline">See what it costs &rarr;</a></p>
+  <div class="cta-row"><a class="btn btn-onpine" href="/start">Try it on a real manual</a><a class="btn btn-ghost" href="/walkthrough">Book a walkthrough</a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+  <div class="foot-top">
+    <a class="brand foot-brand" href="/"><svg width="30" height="29" viewBox="3 7 90 86" fill="none" stroke="#F4F1E8" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></svg><span>Answerlore</span></a>
+    <div class="foot-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/service">For service companies</a><a href="/dealers">For dealers</a><a href="/pricing">Pricing</a><a href="/your-data">Your data</a><a href="/resources">Resources</a><a href="/owners">For owners</a></div>
+  </div>
+  <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
+</div></footer>
+</body>
+</html>
