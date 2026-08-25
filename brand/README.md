@@ -18,7 +18,7 @@ browser-tab icon on answerlore.com and app.answerlore.com.
 | answerlore-icon.svg / -1024.png / -4096.png | The icon. Vector is the master. |
 | answerlore-icon-linkedin-300.png | LinkedIn company logo (300x300 minimum). |
 | answerlore-lockup.svg / -4800.png | Icon + wordmark for light backgrounds. Transparent. |
-| answerlore-lockup-on-dark.svg / -on-dark-4800.png | Same tile, cream wordmark, for dark backgrounds. Transparent. |
+| answerlore-lockup-on-dark.svg / answerlore long logo.png | Same tile, cream wordmark, for dark backgrounds. Transparent. |
 
 ## Rules
 
