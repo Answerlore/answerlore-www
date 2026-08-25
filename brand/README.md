@@ -1,25 +1,24 @@
 # Answerlore brand kit
 
-One mark, one tile, two colorways. The tile matches the browser-tab icon on
-answerlore.com and app.answerlore.com.
+One mark, one tile, one colorway: sage tile with the ink mark. It matches the
+browser-tab icon on answerlore.com and app.answerlore.com.
 
 ## Colors
 
 | Name | Hex | Use |
 |---|---|---|
-| Ink | #1C2420 | Tile on light ground; wordmark text on light ground |
-| Sage | #B9D6C1 | Mark on ink tile; tile on dark ground |
+| Sage | #B9D6C1 | The tile |
+| Ink | #1C2420 | The mark inside the tile; wordmark text on light ground |
 | Cream | #F4F1E8 | Wordmark text on dark ground |
 
 ## Files
 
 | File | Use |
 |---|---|
-| answerlore-icon.svg / -1024.png / -4096.png | Icon on light backgrounds. Vector is the master. |
-| answerlore-icon-sage.svg / -sage-1024.png | Icon on dark backgrounds. |
+| answerlore-icon.svg / -1024.png / -4096.png | The icon. Vector is the master. |
 | answerlore-icon-linkedin-300.png | LinkedIn company logo (300x300 minimum). |
 | answerlore-lockup.svg / -4800.png | Icon + wordmark for light backgrounds. Transparent. |
-| answerlore-lockup-on-dark.svg / -on-dark-4800.png | Icon + wordmark for dark backgrounds. Transparent. |
+| answerlore-lockup-on-dark.svg / -on-dark-4800.png | Same tile, cream wordmark, for dark backgrounds. Transparent. |
 
 ## Rules
 
