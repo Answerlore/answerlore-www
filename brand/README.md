@@ -22,7 +22,8 @@ browser-tab icon on answerlore.com and app.answerlore.com.
 
 ## Rules
 
-- The wordmark is Gabarito 800 with -0.03em tracking, converted to outlines in
-  the SVGs. Merch printers need no font file.
+- The wordmark is ANSWERLORE in Bricolage Grotesque 700, uppercase, +0.06em
+  tracking, matching the web app. It is converted to outlines in the SVGs, so
+  merch printers need no font file.
 - Do not restroke, recolor, or place the bare mark without its tile.
 - PNGs are RGBA with transparent backgrounds. 4800px wide prints 16in at 300dpi.
