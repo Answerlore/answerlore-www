@@ -178,7 +178,7 @@ footer.site{background:var(--ink);color:var(--card);margin-top:60px;border-top:2
 footer.site .wrap{padding-top:56px;padding-bottom:40px}
 .foot-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:40px}
 .foot-brand span{color:var(--ground)}
-.foot-brand{color:var(--lime)}
+.foot-brand{color:var(--sage-deep)}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;max-width:680px}
 .foot-links a{color:rgba(253,252,248,.75);font-size:14px}
 .foot-links a:hover{color:#fff}
