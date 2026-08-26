@@ -1,0 +1,9 @@
+{
+  // Serves the marketing site as static assets from a Worker.
+  // No build step: the 12 HTML files and assets/ are uploaded as-is.
+  // Extensionless URLs (/pricing -> pricing.html) come from the default
+  // html_handling, "auto-trailing-slash". Do not add a build command.
+  "name": "answerlore-www",
+  "compatibility_date": "2026-08-26",
+  "assets": { "directory": "./" }
+}
