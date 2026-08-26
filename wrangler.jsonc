@@ -1,9 +1,14 @@
 {
   // Serves the marketing site as static assets from a Worker.
-  // No build step: the 12 HTML files and assets/ are uploaded as-is.
+  // No build step: everything under public/ uploads as-is.
+  //
+  // The site lives in public/, not the repo root. Pointing assets at the
+  // root made wrangler sweep in .git and its own .wrangler/tmp scratch
+  // directory, and the manifest that produced did not contain index.html.
+  //
   // Extensionless URLs (/pricing -> pricing.html) come from the default
   // html_handling, "auto-trailing-slash". Do not add a build command.
   "name": "answerlore-www",
   "compatibility_date": "2026-08-26",
-  "assets": { "directory": "./" }
+  "assets": { "directory": "./public" }
 }
