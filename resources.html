@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <title>Resources · Answerlore</title>
 <meta name="description" content="Guides for service companies and equipment dealers. No gates and no forms to read them.">
 <link rel="canonical" href="https://answerlore.com/resources">
@@ -36,6 +37,14 @@
 <section><div class="wrap">
   <div class="reslist">
     <div class="rescard">
+      <span class="meta">Published</span>
+      <h3><a href="/hold-time">Fifteen Working Days a Year, on Hold</a></h3>
+      <p>What a call to the manufacturer's tech support line costs a service company, worked out
+         from published wage data and technicians' own reported wait times. Includes the inputs we
+         estimated, so you can argue with them.
+         <a class="quiet" href="/hold-time">Read it &rarr;</a></p>
+    </div>
+    <div class="rescard">
       <span class="meta">In progress</span>
       <h3>How to Audit Your Product Documentation Before Your Best Tech Retires</h3>
       <p>A checklist you can run this week, plus a teardown of a real (anonymized) manual library.</p>
@@ -53,7 +62,7 @@
     </div>
   </div>
   <p class="fine" style="text-align:center;max-width:66ch;margin:28px auto 0">
-    Three guides so far, none published yet. We'd rather publish slowly and be worth citing. New pieces
+    One published, three more in progress. We'd rather publish slowly and be worth citing. New pieces
     land here first.</p>
 </div></section>
 
@@ -77,34 +86,6 @@
   </div>
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
-<script>
-(function(){
-  var PLACEHOLDER = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
-  var EMAIL = 'hello@answerlore.com';
-  document.querySelectorAll('form.form').forEach(function(f){
-    var key = f.querySelector('[name=access_key]');
-    var note = f.querySelector('[data-fallback]');
-    var live = key && key.value !== PLACEHOLDER;
-    if(!live && note){
-      note.hidden = false;
-      note.innerHTML = 'Form delivery isn\'t switched on yet. This button opens your email app ' +
-        'instead, pre-filled. Or write to <a href="mailto:' + EMAIL + '">' + EMAIL + '</a> directly.';
-    }
-    f.addEventListener('submit', function(ev){
-      if(live) return;                       /* real submission to Web3Forms */
-      ev.preventDefault();
-      var lines = [];
-      f.querySelectorAll('input[name], textarea[name]').forEach(function(el){
-        if(el.type === 'hidden' || el.type === 'checkbox' || !el.value) return;
-        var lab = f.querySelector('label[for="' + el.id + '"]');
-        lines.push((lab ? lab.textContent : el.name) + ': ' + el.value);
-      });
-      window.location.href = 'mailto:' + EMAIL +
-        '?subject=' + encodeURIComponent(f.dataset.subject) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-    });
-  });
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

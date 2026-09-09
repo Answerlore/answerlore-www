@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <title>Answerlore · forty brands of manuals in, one answer line out</title>
 <meta name="description" content="A support brain for service companies and equipment dealers. It machines your manuals into cited, customer-safe answers. Anything the docs cannot support gets pulled off the line, logged, and routed.">
 <link rel="canonical" href="https://answerlore.com/">
@@ -329,24 +330,6 @@
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
 
-<script>
-(function(){
-  var reduce=false;
-  try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
-  var nav=document.querySelector('nav.site');
-  if(nav){
-    var stick=function(){nav.classList.toggle('is-stuck',window.scrollY>8)};
-    stick();window.addEventListener('scroll',stick,{passive:true});
-  }
-  var machines=document.querySelectorAll('.machine');
-  if(!('IntersectionObserver' in window)||reduce){
-    machines.forEach(function(m){m.classList.add('run')});return;
-  }
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){e.target.classList.toggle('run',e.isIntersecting)});
-  },{threshold:.35});
-  machines.forEach(function(m){io.observe(m)});
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

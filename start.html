@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <title>Try it on a real manual · Answerlore</title>
 <meta name="description" content="Open a sample workspace pre-loaded with a real service manual, then send your own manuals. No credit card.">
 <link rel="canonical" href="https://answerlore.com/start">
@@ -74,34 +75,6 @@
   </div>
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
-<script>
-(function(){
-  var PLACEHOLDER = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
-  var EMAIL = 'hello@answerlore.com';
-  document.querySelectorAll('form.form').forEach(function(f){
-    var key = f.querySelector('[name=access_key]');
-    var note = f.querySelector('[data-fallback]');
-    var live = key && key.value !== PLACEHOLDER;
-    if(!live && note){
-      note.hidden = false;
-      note.innerHTML = 'Form delivery isn\'t switched on yet. This button opens your email app ' +
-        'instead, pre-filled. Or write to <a href="mailto:' + EMAIL + '">' + EMAIL + '</a> directly.';
-    }
-    f.addEventListener('submit', function(ev){
-      if(live) return;                       /* real submission to Web3Forms */
-      ev.preventDefault();
-      var lines = [];
-      f.querySelectorAll('input[name], textarea[name]').forEach(function(el){
-        if(el.type === 'hidden' || el.type === 'checkbox' || !el.value) return;
-        var lab = f.querySelector('label[for="' + el.id + '"]');
-        lines.push((lab ? lab.textContent : el.name) + ': ' + el.value);
-      });
-      window.location.href = 'mailto:' + EMAIL +
-        '?subject=' + encodeURIComponent(f.dataset.subject) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-    });
-  });
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
