@@ -1,0 +1,30 @@
+# Uptime monitor for app.answerlore.com and answerlore.com.
+#
+# Every 15 minutes, fetch the app's health check and the site's front page.
+# A failed run mails the repository owner (GitHub's default notification for
+# a failed scheduled workflow). This repository is public, so the minutes are
+# free. Nothing here is secret: both URLs are public.
+name: uptime
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: app health check
+        run: |
+          for i in 1 2 3; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 https://app.answerlore.com/healthz)
+            [ "$code" = "200" ] && exit 0
+            echo "attempt $i: $code"; sleep 20
+          done
+          echo "app.answerlore.com/healthz is not returning 200"; exit 1
+      - name: site front page
+        if: always()
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 https://answerlore.com/)
+          [ "$code" = "200" ] || { echo "answerlore.com returned $code"; exit 1; }
