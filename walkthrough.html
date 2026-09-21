@@ -19,14 +19,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site" aria-label="Site"><div class="wrap nav-in">
   <a class="brand" href="/"><svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#B9D6C1"/><g transform="translate(7,5) scale(0.9)" fill="none" stroke="#1C2420" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></g></svg><span>Answerlore</span></a>
   <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a><a href="https://app.answerlore.com/login">Sign in</a></div>
-  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+  <a class="btn btn-primary" href="/start">Request a guided trial</a>
 </div></nav>
 <main id="main">
 <div class="wrap pagehead">
@@ -34,17 +34,20 @@
   <h1>Thirty minutes, your manuals, no slides.</h1>
   <p class="sub">Bring one real manual and five questions your desk answered this week. We'll load the manual live and let Answerlore take the questions, including the ones it should refuse.</p>
 </div><section><div class="wrap">
-<form class="form" id="walkthrough-form" data-subject="Answerlore: walkthrough request" action="https://api.web3forms.com/submit" method="POST">
+<form class="form" id="walkthrough-form" data-subject="Answerlore: walkthrough request" data-event="walkthrough_request_submitted" action="https://api.web3forms.com/submit" method="POST" novalidate>
   <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
   <input type="hidden" name="subject" value="Answerlore: walkthrough request">
-  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required></div>
-  <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Dealership or service company name" required></div>
-  <div class="field"><label for="equipment">What equipment do you support?</label><input id="equipment" name="equipment" type="text" placeholder="e.g., ag equipment, commercial kitchens, HVAC" required></div>
+  <input type="hidden" name="from_name" value="answerlore.com request form">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required autocomplete="email" aria-describedby="email-err"><span class="err" id="email-err" hidden>Enter a work email address so we can reply.</span></div>
+  <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Dealership or service company name" required autocomplete="organization" aria-describedby="company-err"><span class="err" id="company-err" hidden>Enter your company name.</span></div>
+  <div class="field"><label for="equipment">What equipment do you support?</label><span class="hint">Optional.</span><input id="equipment" name="equipment" type="text" placeholder="e.g., ag equipment, commercial kitchens, HVAC"></div>
   <div class="field"><label for="preload">Anything you want us to load in advance?</label><span class="hint">Optional. It makes the half hour count.</span><textarea id="preload" name="preload" placeholder="A manual, a brand, a question that keeps escalating"></textarea></div>
-  <button class="btn btn-primary" type="submit">Book the walkthrough</button>
+  <button class="btn btn-primary" type="submit" data-live-label="Send the request">Email us to book a walkthrough</button>
+  <p class="form-note" data-email-note>This button opens your email app with the answers above pre-filled; nothing is sent from this page. Or write to <span class="addr">hello@answerlore.com</span><button type="button" class="copybtn">Copy address</button><span class="copy-status" aria-live="polite"></span></p>
+  <p class="form-note" data-live-note hidden>Sent through our form service. You will see a confirmation on this page once it accepts the request.</p>
   <p class="form-note">We reply from hello@answerlore.com. Send a manual PDF with your reply if you want it pre-loaded.</p>
-  <p class="form-note" data-fallback hidden></p>
+  <div class="form-status" hidden tabindex="-1"></div>
 </form>
 </div></section>
 </main>
@@ -55,6 +58,7 @@
   </div>
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/measure.js?v=9" defer></script>
+<script src="/assets/site.js?v=9" defer></script>
 </body>
 </html>
