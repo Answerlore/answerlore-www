@@ -44,11 +44,13 @@ What it does not promise: a savings percentage, or guaranteed correctness.
 
 ## Open questions for the founder
 
-1. **Refund wording.** The Knowledge Map refund on `/pricing` ("If the map concludes
-   Answerlore won't help you, you keep the map and we refund the fee") is conditional on the
-   map's own conclusion, which the customer cannot evaluate. The pilot creates a second,
-   different commitment (credit, not refund). The two should be read together before either
-   is treated as a contractual term. This branch does not change the refund wording.
+1. **Refund wording. Resolved 2026-09-21.** The old sentence ("If the map concludes
+   Answerlore won't help you...") left open who concludes and what happens when the customer
+   disagrees. `/pricing` now says the map ends with a written recommendation from Answerlore:
+   recommend against, fee refunded and map kept; recommend for and the customer declines, map
+   kept and fee not refunded. No new refund right was created; the existing one now has a
+   named trigger. The pilot's commitment is different (a credit, not a refund) and the copy
+   keeps them separate.
 2. **Does the pilot replace the Knowledge Map for a founding customer, or precede it?** The
    copy says "precede": credit toward the map. If the intent is "replace", the credit line
    and the map section need to say so.

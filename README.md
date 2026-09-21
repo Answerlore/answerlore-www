@@ -17,6 +17,7 @@ framework. Prices and pilot terms have one source, `assets/offers.json`, and
 | `knowledge-map-example.html` | `/knowledge-map-example` | A worked Knowledge Map for a fictional dealer. |
 | `your-data.html` | `/your-data` | Plain-language data and security answers. |
 | `resources.html` | `/resources` | Guides hub. |
+| `hold-time.html` | `/hold-time` | Guide: what a manufacturer tech-support call costs a service company. First published guide. |
 | `start.html` | `/start` | Guided trial request: sample workspace, a workspace from the prospect's manuals, or the pilot (`?request=pilot` preselects). Primary call-to-action target. |
 | `walkthrough.html` | `/walkthrough` | Walkthrough booking form. Secondary call-to-action target. |
 | `owners.html` | `/owners` | Printable one-pager of dealer math. |
