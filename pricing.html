@@ -7,6 +7,202 @@
 <title>Pricing · Answerlore</title>
 <meta name="description" content="Every price on the page: three tiers, both rates, the one-time Knowledge Map, a scoped founding-customer pilot, what the first year actually costs, and what isn't built yet.">
 <link rel="canonical" href="https://answerlore.com/pricing">
+<!-- ld:pricing -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://answerlore.com/#software",
+    "name": "Answerlore",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Knowledge management for field service",
+    "operatingSystem": "Web",
+    "url": "https://answerlore.com",
+    "description": "Loads the service manuals a company already owns, answers a technician's question with the manual, revision, and page number attached, and says \"not in the knowledge base\" instead of guessing.",
+    "publisher": {
+      "@id": "https://answerlore.com/#organization"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "750",
+        "priceCurrency": "USD",
+        "url": "https://answerlore.com/pricing",
+        "availability": "https://schema.org/InStock",
+        "eligibleCustomerType": "https://schema.org/Business",
+        "priceSpecification": [
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Billed annually",
+            "price": "750",
+            "priceCurrency": "USD",
+            "unitText": "MONTH",
+            "billingDuration": 12
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Month to month",
+            "price": "900",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "One-time Knowledge Map and ingestion",
+            "price": "3500",
+            "priceCurrency": "USD"
+          }
+        ]
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard",
+        "price": "1500",
+        "priceCurrency": "USD",
+        "url": "https://answerlore.com/pricing",
+        "availability": "https://schema.org/InStock",
+        "eligibleCustomerType": "https://schema.org/Business",
+        "priceSpecification": [
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Billed annually",
+            "price": "1500",
+            "priceCurrency": "USD",
+            "unitText": "MONTH",
+            "billingDuration": 12
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Month to month",
+            "price": "1800",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "One-time Knowledge Map and ingestion",
+            "price": "5000",
+            "priceCurrency": "USD"
+          }
+        ]
+      },
+      {
+        "@type": "Offer",
+        "name": "Scale",
+        "price": "3000",
+        "priceCurrency": "USD",
+        "url": "https://answerlore.com/pricing",
+        "availability": "https://schema.org/InStock",
+        "eligibleCustomerType": "https://schema.org/Business",
+        "priceSpecification": [
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Billed annually",
+            "price": "3000",
+            "priceCurrency": "USD",
+            "unitText": "MONTH",
+            "billingDuration": 12
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "Month to month",
+            "price": "3600",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            "name": "One-time Knowledge Map and ingestion",
+            "price": "7500",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why isn't this priced per user?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because per-user pricing makes you ration who gets to ask. The moment a license costs money per head, the answer becomes “just the three senior technicians,” and the new hire who needs it most is locked out. Our costs aren't per-seat either: you get your own instance, and people six through fifteen cost us close to nothing. We would rather charge for the instance and have everyone in the building asking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is there a setup fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because there is a month of real work before a subscription earns anything, and that work produces something you keep. The Knowledge Map ranks where your support time actually goes and ingests the manuals behind the top categories. It ends with our written recommendation; if we recommend against proceeding, you keep the map and we refund the fee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does this cost more than Guru?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Different job. Guru is a knowledge platform your team fills, governs and searches, priced per seat because that is what it is. Answerlore ingests your equipment manuals, builds the knowledge base, keeps it current, and hands you a ranked list of what is missing. Per-seat pricing pays for none of the ingestion work that makes the answers correct, which is why ours is per instance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why not just use ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A general assistant answers from whatever it was trained on, and a tribunal has already held a company responsible for what its chatbot told a customer. Answerlore is built for a narrower job: it answers only from the topic docs made from your manuals, prints the document, revision, and page with every claim, and when your documents don't settle the question it says so and files the gap for the person who owns the answer. Evaluate it on that: how it organizes your manuals, exposes sources, routes unanswered questions, and supports your team's review process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when we outgrow a tier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We tell you, and you move up at your renewal date. No overage billing, nothing switched off mid-term, no true-up invoice. Headcount moves around at a service company; we would rather look at the band once a year than police it every month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a long-term contract?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only if you want the annual price. Month to month is exactly that, cancel any time. Month to month costs 20% more per month, so the annual rate works out about 17% less in exchange for twelve months. We would rather you start monthly and stay because it works."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to our data if we leave?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You take it with you. Your knowledge base is plain files: readable, exportable, yours. Deleting your instance deletes everything, and we confirm it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you train AI models on our documents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your documents stay in your instance and are used only to answer your team's questions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "We have compliance requirements.",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Book a walkthrough and bring the list. Single-tenant architecture answers some of them; the rest depend on your requirements, and we would rather show you than promise you. Full detail on the Your data page."
+        }
+      }
+    ]
+  }
+]
+</script>
+<!-- /ld:pricing -->
 <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png?v=5" sizes="32x32">
 <link rel="apple-touch-icon" href="/mark-256.png?v=5">
