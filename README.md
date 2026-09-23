@@ -86,5 +86,3 @@ in all twelve files.
 - The homepage walkthrough is labeled illustrative because there is no approved public manual
   to show and no recording of the application. To replace it: an OEM manual we are licensed to
   display, or a recording of app.answerlore.com against the sample workspace.
-- Cloudflare injects a Web Analytics beacon at the edge that the CSP blocks (console error on
-  every page). Turn it off in Cloudflare, or allow it and update the footer. `docs/MEASUREMENT.md`.

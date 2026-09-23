@@ -12,13 +12,12 @@ that is disclosed before it ships.
 
 Two things were found during the audit that bear on this:
 
-- Cloudflare injects its Web Analytics beacon (`static.cloudflareinsights.com/beacon.min.js`)
-  into every page at the edge. The site's Content-Security-Policy blocks it, so it never runs,
-  and the browser console logs a CSP violation on every page load. That is a zone-level
-  Cloudflare setting ("Web Analytics" auto-injection), not something in this repository. It
-  should be switched off in the Cloudflare dashboard so the CSP error goes away, or, if the
-  founder wants it, allowed in the CSP and disclosed in the footer. This document does not
-  make that choice.
+- Cloudflare was injecting its Web Analytics beacon (`static.cloudflareinsights.com/beacon.min.js`)
+  into every page at the edge. The site's Content-Security-Policy blocked it, so it never ran,
+  but every page load logged a CSP violation. Automatic setup was switched off in the Cloudflare
+  dashboard on 2026-09-23 and the live pages were checked afterwards: no beacon script. If it
+  reappears, that is the Web Analytics "automatic setup" toggle for answerlore.com, nothing in
+  this repository.
 - The forms' delivery service (Web3Forms) is the only third party the pages talk to, and only
   when a visitor submits a form.
 
