@@ -62,17 +62,14 @@ in all twelve files.
 
 ## Before this is finished
 
-1. **Switch the forms on.** Get a free access key at web3forms.com, then replace every
-   occurrence of `REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY` in `start.html`, `walkthrough.html`
-   and `resources.html`. Until then the pages are written for the truth: the button is
-   labeled "Email us to …", the note under it says it opens the visitor's email app, and the
-   address is printed with a copy control. Once the key is in, `assets/site.js` switches the
-   same forms to a real submission with loading, success, retry and failure states, and
-   reports nothing as sent until Web3Forms answers `success: true`. Test with a dummy key
-   against a local mock before the real one (see the branch's pull request for the recipe).
-   The site's CSP already allows `api.web3forms.com`.
-2. **Create the hello@answerlore.com forward** in Porkbun, pointing at your inbox. The footer
-   and the form fallback both use that address.
+1. **Forms are on.** The Web3Forms access key in `start.html`, `walkthrough.html` and
+   `resources.html` delivers to hello@answerlore.com; verified with one real submission on
+   2026-09-23. The key is public by design (it only lets a form send mail to that inbox), and
+   the Web3Forms dashboard is where to rotate it or restrict it to answerlore.com. If it is
+   ever removed, `assets/site.js` falls back to the email-first behaviour on its own.
+2. **hello@answerlore.com** is a Google Workspace address now (MX is `smtp.google.com`); the
+   Porkbun forward in `docs/DNS-SNAPSHOT-2026-08-26.md` of the template repo is no longer in
+   the delivery path. The footer and the form fallback both use that address.
 3. **Check the founder note** on the home page. It is signed "Colby Richard, founder,
    Answerlore. August 2026."
 
