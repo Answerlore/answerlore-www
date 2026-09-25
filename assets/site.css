@@ -329,7 +329,7 @@ table.figures{width:100%;border-collapse:collapse;min-width:600px}
 /* =====================================================================
    HOME · the answer line
    ===================================================================== */
-.hero{padding:56px 0 0}
+.hero{padding:56px 0 72px}
 .hero h1{font-size:clamp(2.4rem,6vw,4.6rem);max-width:19ch;line-height:1}
 .hero .sub{margin:26px 0 30px;max-width:56ch}
 .hero .cta-row{justify-content:flex-start}
