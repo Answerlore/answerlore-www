@@ -1,6 +1,8 @@
 # Consistency checks for the site. Runs scripts/check_offers.py, which verifies
 # every price against assets/offers.json, forbids retired promises, and checks
-# that every internal link has a file behind it. Stdlib Python only.
+# that every internal link has a file behind it, then build_machine_files.py --check,
+# which fails if pricing.md, sitemap.xml, or the pricing JSON-LD drifted from
+# assets/offers.json. Stdlib Python only.
 name: checks
 on:
   push:
@@ -13,3 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/check_offers.py
+      - run: python3 scripts/build_machine_files.py --check

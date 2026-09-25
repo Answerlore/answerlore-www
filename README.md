@@ -21,16 +21,34 @@ framework. Prices and pilot terms have one source, `assets/offers.json`, and
 | `start.html` | `/start` | Guided trial request: sample workspace, a workspace from the prospect's manuals, or the pilot (`?request=pilot` preselects). Primary call-to-action target. |
 | `walkthrough.html` | `/walkthrough` | Walkthrough booking form. Secondary call-to-action target. |
 | `owners.html` | `/owners` | Printable one-pager of dealer math. |
+| `about.html` | `/about` | Who builds Answerlore, the rules every page follows, how to correct a page. The entity anchor for structured data. |
 
 `assets/site.css` holds every style. `assets/site.js` is the shared script (nav, forms).
 `assets/demo.js` runs the homepage walkthrough only. `assets/measure.js` is the local-only
 event interface described in `docs/MEASUREMENT.md`. `CNAME` binds the site to answerlore.com.
 Do not delete it.
 
+## Machine-readable files
+
+| File | Source | How it is made |
+|---|---|---|
+| `robots.txt` | hand-written | Allows every crawler that can cite a page (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Bingbot). Blocks CCBot, which only trains. |
+| `sitemap.xml` | generated | Every tracked page except `404.html`, `lastmod` from the last commit touching the file. |
+| `llms.txt` | hand-written | What the company does, who it is for, prices in one line, the key pages. Update the date on every real change. |
+| `pricing.md` | generated | Every price, limit, and term, from `assets/offers.json`. |
+| JSON-LD on `pricing.html` | generated | `SoftwareApplication` offers from `offers.json`, plus `FAQPage` built from the page's own `.faq-item` text between the `<!-- ld:pricing -->` markers, so the schema cannot say what the page does not. |
+| JSON-LD on `index.html`, `about.html` | hand-written | `Organization`, `WebSite`, `Person`. `sameAs` is deliberately absent until social accounts exist. |
+
+```
+python3 scripts/build_machine_files.py          # regenerate after any price or page change
+python3 scripts/build_machine_files.py --check  # what CI runs
+```
+
 ## Checks
 
 ```
 python3 scripts/check_offers.py
+python3 scripts/build_machine_files.py --check
 ```
 
 Verifies the arithmetic in `assets/offers.json` (month to month is 20% above the annual

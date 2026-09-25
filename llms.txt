@@ -1,0 +1,66 @@
+# Answerlore
+
+> Answerlore loads the service manuals a company already owns, answers technician questions in
+> plain language with the manual page attached, and says "not in the knowledge base" instead of
+> guessing.
+
+Answerlore is a cited answer layer for multi-brand field service. It is built for independent
+service companies and equipment dealers whose technicians work across many manufacturers'
+equipment and cannot memorize all of it.
+
+Last updated: 2026-09-21
+
+## What it does
+
+- Ingests service manuals, bulletins, and internal notes into topic-scoped documents, one topic
+  per document, each carrying the source file, the page range, the revision, and the date a
+  human last verified it.
+- Answers a question with a short answer, the steps if there are steps, and a citation naming
+  the document, the section, the manual revision, and the page number. Answers are short by
+  default, under 200 words, because the technician is standing at the equipment.
+- Refuses when no loaded document settles the question, names the team to ask, and logs the
+  question as a documentation gap with a count of how often it is asked.
+- Drafts a customer-safe version of the answer with part numbers, root causes, and internal
+  escalation paths removed, for a technician to review and send.
+
+## What it is not
+
+- Not a ticket deflection bot. A human still handles the ticket.
+- Not a vector database product. Retrieval is search over structured files, and a support lead
+  corrects a wrong answer by editing the source document.
+- Not self-serve. Access starts with a guided trial, then a Knowledge Map engagement.
+- Not SOC 2 certified. Single-tenant by construction; see the Your data page.
+
+## Who it is for
+
+Independent authorized service agencies and equipment dealers, typically 8 to 75 people, whose
+technicians service equipment from several manufacturers. Users are field technicians,
+dispatchers, service managers, and inside sales representatives.
+
+## Pricing
+
+Flat monthly price per company, not per seat. Starter $750 per month billed annually,
+Standard $1,500, Scale $3,000, each with a one-time Knowledge Map and ingestion fee of $3,500
+to $7,500. A 30-day founding-customer pilot is $750. Every figure, both billing rates, and the
+tier limits: https://answerlore.com/pricing.md
+
+## Key pages
+
+- [How it works](https://answerlore.com/how-it-works): ingestion, retrieval, citation, refusal,
+  and the honest list of what it does not do.
+- [Why it refuses](https://answerlore.com/why-it-refuses): the design argument for refusing to
+  guess, with the sources for the claims.
+- [Pricing](https://answerlore.com/pricing): three tiers, both billing rates, the Knowledge Map
+  fee, the pilot, and what the first year costs.
+- [Your data](https://answerlore.com/your-data): where manuals live, who can see them, and what
+  certifications the company does and does not hold.
+- [A worked Knowledge Map](https://answerlore.com/knowledge-map-example): a complete ticket
+  map for a fictional dealer, arithmetic shown.
+- [Resources](https://answerlore.com/resources): published guides. First guide:
+  [Fifteen Working Days a Year, on Hold](https://answerlore.com/hold-time), what a call to a
+  manufacturer's tech support line costs a service company.
+- [About](https://answerlore.com/about): who builds Answerlore and how to correct a page.
+
+## Contact
+
+https://answerlore.com/start or hello@answerlore.com
