@@ -37,11 +37,13 @@ Do not delete it.
 | `llms.txt` | hand-written | What the company does, who it is for, prices in one line, the key pages. Update the date on every real change. |
 | `pricing.md` | generated | Every price, limit, and term, from `assets/offers.json`. |
 | JSON-LD on `pricing.html` | generated | `SoftwareApplication` offers from `offers.json`, plus `FAQPage` built from the page's own `.faq-item` text between the `<!-- ld:pricing -->` markers, so the schema cannot say what the page does not. |
+| `fd5174800ddee9192e4df06736cce97d.txt` | generated once | IndexNow key file. Lets `scripts/indexnow_ping.py` tell Bing, Yandex, and Naver which URLs changed, with no account. Google does not use IndexNow; submit `sitemap.xml` in Search Console by hand. |
 | JSON-LD on `index.html`, `about.html` | hand-written | `Organization`, `WebSite`, `Person`. `sameAs` is deliberately absent until social accounts exist. |
 
 ```
 python3 scripts/build_machine_files.py          # regenerate after any price or page change
 python3 scripts/build_machine_files.py --check  # what CI runs
+python3 scripts/indexnow_ping.py                # after a deploy: submit every sitemap URL to IndexNow
 ```
 
 ## Checks
