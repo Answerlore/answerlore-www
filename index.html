@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
-<title>Answerlore · forty brands of manuals in, one answer line out</title>
-<meta name="description" content="A support brain for service companies and equipment dealers. It machines your manuals into cited, customer-safe answers. Anything the docs cannot support gets pulled off the line, logged, and routed.">
+<title>Answerlore · find the right answer in your equipment manuals</title>
+<meta name="description" content="Answerlore helps equipment dealers and service teams find answers in their own manuals, check the source page, and prepare a customer reply. Questions the documents do not resolve go to an expert for review.">
 <link rel="canonical" href="https://answerlore.com/">
 <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png?v=5" sizes="32x32">
 <link rel="apple-touch-icon" href="/mark-256.png?v=5">
-<meta property="og:title" content="Answerlore · forty brands of manuals in, one answer line out">
-<meta property="og:description" content="A support brain for service companies and equipment dealers. It machines your manuals into cited, customer-safe answers. Anything the docs cannot support gets pulled off the line, logged, and routed.">
+<meta property="og:title" content="Answerlore · find the right answer in your equipment manuals">
+<meta property="og:description" content="Answerlore helps equipment dealers and service teams find answers in their own manuals, check the source page, and prepare a customer reply. Questions the documents do not resolve go to an expert for review.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://answerlore.com/">
 <meta property="og:site_name" content="Answerlore">
@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,21 +30,149 @@
     <span>Answerlore</span>
   </a>
   <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a><a href="https://app.answerlore.com/login">Sign in</a></div>
-  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+  <a class="btn btn-primary" href="/start">Request a guided trial</a>
 </div></nav>
 
 <main id="main">
 
 <!-- ============================== HERO ============================== -->
 <header class="hero"><div class="wrap">
-  <h1>Forty brands of manuals in. <span class="tone">One answer line</span> out.</h1>
-  <p class="sub">Answerlore is a support brain for service companies and equipment dealers. It machines your manuals into cited, customer-safe answers a technician can read while the customer is on the line. Anything the docs cannot support gets pulled off the line, logged, and routed.</p>
+  <h1>Find the right answer in your equipment manuals, while the customer is still on the line.</h1>
+  <p class="sub">Answerlore helps equipment dealers and service teams find answers in their own manuals, check the source page, and prepare a customer reply. Questions the documents do not resolve go to an expert for review.</p>
   <div class="cta-row">
-    <a class="btn btn-primary" href="/start">Try it on a real manual</a>
-    <a class="btn btn-ghost" href="#station-3">Watch it refuse</a>
+    <a class="btn btn-primary" href="/start">Request a guided trial</a>
+    <a class="btn btn-ghost" href="#walkthrough">See a worked example</a>
   </div>
-</div>
+</div></header>
 
+<!-- ======================== ILLUSTRATIVE WALKTHROUGH ======================== -->
+<section class="walk" id="walkthrough" aria-labelledby="wh"><div class="wrap">
+  <div class="walk-label"><span class="eyebrow">Illustrative walkthrough &middot; not a live answer</span></div>
+  <h2 id="wh" style="text-align:center">What a technician sees.</h2>
+  <p class="fine" style="text-align:center;max-width:62ch;margin:14px auto 0">Three questions against one sample workspace. The workspace is <b>Caldbeck</b>, a fictional manufacturer with an invented service manual, and it is the same sample data the demo application ships with. The text below is written to the product's answer format, not generated live on this page.</p>
+
+  <div class="stage">
+    <div class="chips" role="group" aria-label="Choose a question">
+      <button type="button" data-panel="supported" aria-pressed="true">A supported question</button>
+      <button type="button" data-panel="ambiguous" aria-pressed="false">The model is not stated</button>
+      <button type="button" data-panel="unsupported" aria-pressed="false">The manual does not cover it</button>
+    </div>
+    <div class="doc">
+      <div class="doc-head">
+        <span class="ws"><svg width="16" height="16" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#B9D6C1"/><g transform="translate(7,5) scale(0.9)" fill="none" stroke="#1C2420" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></g></svg>sample workspace &middot; fictional</span>
+        <span class="ref">Caldbeck X200/X250 &middot; Service Manual Rev 4 (invented)</span>
+      </div>
+      <p class="q-line">Asked: <b id="qtext">Customer has an X250 throwing E04 and the flow looks normal</b><span class="caret" id="qcaret" hidden></span></p>
+
+      <!-- Panel 1: supported. Every sentence below traces to the sample doc
+           knowledge/troubleshooting/x250-pressure-fault-e04.md in the demo workspace. -->
+      <div class="answer" data-panel="supported" data-question="Customer has an X250 throwing E04 and the flow looks normal">
+        <p class="ans-h">Short answer</p>
+        <p>Check the ship date first. X250 units shipped before 2026-03-15 carry a known sensor drift fault that shows a false E04. Normal flow with a low-side E04 on one of those units points to the sensor. On later units, E04 usually means a clogged pre-filter.</p>
+        <p class="ans-h">Steps</p>
+        <ol>
+          <li>Confirm the model from the serial plate. E04 exists on the X250 only.</li>
+          <li>Record the ship date from the serial plate.</li>
+          <li>Hold the mode button for 5 seconds to reach the diagnostics screen.</li>
+          <li>Note whether the pressure reading is high-side (above 62 PSI) or low-side (below 18 PSI).</li>
+          <li>If the reading is low-side and the ship date is before 2026-03-15, stop diagnosing. Follow the known-issue doc.</li>
+          <li>If the reading is high-side, ask whether output flow has fallen over recent weeks.</li>
+          <li>Have the customer inspect the pre-filter cartridge. A loaded cartridge is discolored across its full depth.</li>
+          <li>If the cartridge is loaded, replace it and clear the code. The unit clears E04 after 60 seconds of in-range readings.</li>
+          <li>If the code returns within 24 hours of a cartridge replacement, escalate. Do not replace a second cartridge.</li>
+        </ol>
+        <p class="ans-h">Escalate if</p>
+        <ul class="esc-list">
+          <li>E04 returns within 24 hours of a pre-filter replacement. Product engineering.</li>
+          <li>The diagnostics screen shows a reading inside the 18 to 62 PSI range while E04 is displayed. Product engineering.</li>
+        </ul>
+        <p class="ans-h">Sources</p>
+        <p><button type="button" class="src-toggle" data-panel="supported" aria-expanded="false" aria-controls="src-e04"><span class="mono">knowledge/troubleshooting/x250-pressure-fault-e04.md</span><span>Rev 4 &middot; pp. 112-117</span></button><br>
+           <span class="cite">knowledge/known-issues/ki-2026-004-pressure-sensor-drift.md &middot; SB-2026-004 Rev B &middot; pp. 1-3</span></p>
+        <div class="src-panel" id="src-e04" hidden>
+          <dl>
+            <dt>Manual</dt><dd>X200/X250 Service Manual, Rev 4, 2025-11 (fictional)</dd>
+            <dt>Pages</dt><dd>112-117</dd>
+            <dt>Doc</dt><dd>knowledge/troubleshooting/x250-pressure-fault-e04.md &sect; Details</dd>
+            <dt>Last verified</dt><dd>2026-08-14 by K. Osei, product engineering &middot; 90-day review horizon</dd>
+          </dl>
+          <blockquote>
+            <p>E04 fires when the control board reads inlet-side pressure above 62 PSI or below 18 PSI for more than 30 continuous seconds. The display shows the code; it does not show which direction. That distinction is on the diagnostics screen, reached by holding the mode button for 5 seconds.</p>
+            <p>The X200 does not have this fault and does not show error codes at all. It has a mechanical gauge and no control board.</p>
+          </blockquote>
+          <p class="fine">In the application this opens the knowledge doc itself, with its source manual, page range, revision, and the date a person last verified it.</p>
+        </div>
+        <div class="conf is-high"><b>Confidence: high</b><span>Both sources are inside their review horizon and agree.</span></div>
+      </div>
+
+      <!-- Panel 2: the model is not stated. The product corrects the premise and
+           still prints the procedure, with the condition first. -->
+      <div class="answer" data-panel="ambiguous" data-question="Customer says the unit is showing E04. What do they check first?" hidden>
+        <p class="ans-h">Short answer</p>
+        <p>Confirm the model from the serial plate before anything else. Only the X250 shows error codes. The X200 has a mechanical gauge and no control board, so it cannot show E04. If the unit is an X250, check the ship date, then read the diagnostics screen.</p>
+        <p class="ans-h">Steps</p>
+        <ol>
+          <li>Ask the customer to read the model from the serial plate.</li>
+          <li>If the plate says X200, the unit cannot show a code. Ask what device the customer is reading.</li>
+          <li>If the plate says X250, record the ship date from the plate.</li>
+          <li>Hold the mode button for 5 seconds to reach the diagnostics screen.</li>
+          <li>Note whether the pressure reading is high-side (above 62 PSI) or low-side (below 18 PSI).</li>
+          <li>If the reading is low-side and the ship date is before 2026-03-15, stop diagnosing. Follow the known-issue doc.</li>
+          <li>If the reading is high-side, inspect the pre-filter cartridge and replace it if it is loaded.</li>
+        </ol>
+        <p class="ans-h">Sources</p>
+        <p><span class="cite">knowledge/troubleshooting/x250-pressure-fault-e04.md &middot; Rev 4 &middot; pp. 112-117</span><br>
+           <span class="cite">knowledge/products/x200.md &middot; Datasheet Rev G &middot; pp. 1-4</span></p>
+        <div class="conf is-high"><b>Confidence: high</b><span>The model was not stated. The steps branch on it rather than waiting for it, because the customer is on the line.</span></div>
+      </div>
+
+      <!-- Panel 3: not covered. Refusal, owning team, gap filed, handoff prefilled. -->
+      <div class="answer" data-panel="unsupported" data-question="What pretreatment do we recommend for a site running above 5 NTU?" hidden>
+        <div class="refuse">
+          <p><span class="lead">Not in the knowledge base.</span> The service manual gives 5 NTU as the feedwater turbidity limit. It does not recommend a pretreatment method above that limit, and Answerlore does not infer a specification from a limit. Ask product engineering.</p>
+          <span class="gapchip">Logged to the gap log &middot; asked 7 times &middot; owner: product engineering &middot; P1</span>
+        </div>
+        <p class="ans-h" style="margin-top:18px">Handoff, prefilled</p>
+<pre class="handoff">Serial number:
+Product and ship date:
+Customer's question, in their words: pretreatment for feedwater above 5 NTU
+What I have already ruled out, with evidence: manual states the 5 NTU limit only
+Knowledge docs consulted: troubleshooting/low-flow-rate.md
+What I need to decide: which pretreatment to recommend</pre>
+        <div class="conf is-none"><b>Confidence: none</b><span>Nothing in the knowledge base supports an answer. A refusal is a designed output, not a failure. The gap log ranks it for whoever documents next.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="walk-foot">
+    <p class="fine">Answers in the application are generated from the workspace's knowledge docs at the time of the question and can differ in wording from this page. What does not change: every claim carries a document, a revision, and a page, and a question the documents do not settle is refused and routed.</p>
+    <p><a class="quiet" href="/why-it-refuses">Why it refuses &#8594;</a></p>
+  </div>
+</div></section>
+
+<!-- ============================== BENEFITS ============================== -->
+<section class="benefits" aria-labelledby="bh" style="padding-top:0"><div class="wrap">
+  <h2 id="bh" style="text-align:center">Three things it does.</h2>
+  <div class="cards3">
+    <div class="cardi">
+      <span class="num">01</span>
+      <h3>Find relevant manual information.</h3>
+      <p>A technician asks in plain words. Answerlore reads the topic docs built from your manuals and returns a short answer with the steps, in order.</p>
+    </div>
+    <div class="cardi">
+      <span class="num">02</span>
+      <h3>Verify model, revision, and source.</h3>
+      <p>Every claim names the document, the manual revision, and the page range. A technician can open the original and show the customer where it says so.</p>
+    </div>
+    <div class="cardi">
+      <span class="num">03</span>
+      <h3>Capture unanswered questions for expert review.</h3>
+      <p>A question the documents do not settle is refused, logged with a running count and an owning team, and answered once by the person who knows.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================ HOW THE LINE RUNS ============================ -->
+<div class="line-intro" style="margin-top:20px">
 <!-- the line: manuals ride in, machine stamps, cited card rides out -->
 <div class="line-stage" role="img" aria-label="Assembly line: service manuals ride a conveyor into a stamping machine and come out as answer cards with page citations.">
   <svg viewBox="0 0 1200 300" fill="none">
@@ -106,10 +234,10 @@
   </svg>
 </div>
 <div class="wrap line-cap">
-  <span class="mono-cap">Line 01 &middot; running &middot; Caldbeck X200/X250 sample workspace</span>
+  <span class="mono-cap">How the line runs &middot; Caldbeck X200/X250 sample workspace</span>
   <span class="mono-cap">Every claim traces to a manual page</span>
 </div>
-</header>
+</div>
 
 <!-- ============================ STATION 01 ============================ -->
 <section class="station" aria-labelledby="s1h">
@@ -304,6 +432,7 @@
 <section style="padding-bottom:0"><div class="wrap">
   <div class="notecard">
     <div class="markrow"><svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#B9D6C1"/><g transform="translate(7,5) scale(0.9)" fill="none" stroke="#1C2420" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></g></svg></div>
+    <span class="founder-tag">Founder statement &middot; not a customer testimonial</span>
     <p>&ldquo;In equipment support, a confident wrong answer costs more than no answer.&rdquo;</p>
     <p class="small">We fed Answerlore a real manufacturer's service manual. It answered what the manual settles, with page numbers. Asked something the manual doesn't settle, it declined and filed a gap. It even flagged the manual contradicting itself about its own version number.</p>
     <p class="sig">Colby Richard, founder, Answerlore. August 2026</p>
@@ -312,10 +441,10 @@
 
 <!-- ============================ CLOSING ============================ -->
 <section class="band"><div class="wrap">
-  <h2>See the line run <span class="tone">on your manuals.</span></h2>
-  <p>The machines above run a sample workspace. The trial takes yours: upload a manual, ask what your customers ask, and watch what ships and what gets pulled.</p>
+  <h2>See it run <span class="tone">on your manuals.</span></h2>
+  <p>A guided trial starts on the sample workspace above, or on a workspace we prepare from your own manuals. A person sets it up with you; nothing opens by itself.</p>
   <div class="cta-row">
-    <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+    <a class="btn btn-primary" href="/start">Request a guided trial</a>
     <a class="btn btn-ghost" href="/walkthrough">Book a walkthrough</a>
   </div>
 </div></section>
@@ -330,6 +459,8 @@
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/measure.js?v=9" defer></script>
+<script src="/assets/site.js?v=9" defer></script>
+<script src="/assets/demo.js?v=9" defer></script>
 </body>
 </html>

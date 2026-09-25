@@ -19,14 +19,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site" aria-label="Site"><div class="wrap nav-in">
   <a class="brand" href="/"><svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#B9D6C1"/><g transform="translate(7,5) scale(0.9)" fill="none" stroke="#1C2420" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></g></svg><span>Answerlore</span></a>
   <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources" aria-current="page">Resources</a><a href="https://app.answerlore.com/login">Sign in</a></div>
-  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+  <a class="btn btn-primary" href="/start">Request a guided trial</a>
 </div></nav>
 <main id="main">
 <div class="wrap pagehead">
@@ -68,14 +68,17 @@
 
 <section><div class="wrap">
 
-<form class="form" id="resources-form" data-subject="Answerlore: send me new guides" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
+<form class="form" id="resources-form" data-subject="Answerlore: send me new guides" data-event="guides_signup_submitted" action="https://api.web3forms.com/submit" method="POST" novalidate>
+  <input type="hidden" name="access_key" value="0d824d5b-015d-42c8-8f36-7ffc5ba71ba8">
   <input type="hidden" name="subject" value="Answerlore: send me new guides">
-  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required></div>
-  <button class="btn btn-primary" type="submit">Send me new guides</button>
+  <input type="hidden" name="from_name" value="answerlore.com request form">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required autocomplete="email" aria-describedby="email-err"><span class="err" id="email-err" hidden>Enter an email address.</span></div>
+  <button class="btn btn-primary" type="submit" data-live-label="Send me new guides">Email us to get new guides</button>
+  <p class="form-note" data-email-note>This button opens your email app with a pre-filled note; nothing is sent from this page. Or write to <span class="addr">hello@answerlore.com</span><button type="button" class="copybtn">Copy address</button><span class="copy-status" aria-live="polite"></span></p>
+  <p class="form-note" data-live-note hidden>Sent through our form service. You will see a confirmation on this page once it accepts the request.</p>
   <p class="form-note">No more than monthly, unsubscribe in one click.</p>
-  <p class="form-note" data-fallback hidden></p>
+  <div class="form-status" hidden tabindex="-1"></div>
 </form>
 </div></section>
 </main>
@@ -86,6 +89,7 @@
   </div>
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/measure.js?v=9" defer></script>
+<script src="/assets/site.js?v=9" defer></script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+{
+  "_comment": "Single source for every price and limit printed on answerlore.com. scripts/check_offers.py verifies the arithmetic and that no page prints a dollar figure that is not derived from this file. Edit here first, then the HTML.",
+  "currency": "USD",
+  "prices_as_of": "2026-08",
+  "monthly_uplift": 0.2,
+  "tiers": {
+    "starter": {
+      "label": "Starter",
+      "annual_per_month": 750,
+      "month_to_month": 900,
+      "knowledge_map": 3500,
+      "people": 10,
+      "product_lines": 1,
+      "knowledge_docs": 250,
+      "ingests_per_year": 2
+    },
+    "standard": {
+      "label": "Standard",
+      "annual_per_month": 1500,
+      "month_to_month": 1800,
+      "knowledge_map": 5000,
+      "people": 30,
+      "product_lines": 5,
+      "knowledge_docs": 1500,
+      "ingests_per_year": 8
+    },
+    "scale": {
+      "label": "Scale",
+      "annual_per_month": 3000,
+      "month_to_month": 3600,
+      "knowledge_map": 7500,
+      "people": 75,
+      "product_lines": null,
+      "knowledge_docs": null,
+      "ingests_per_year": null
+    }
+  },
+  "first_year": {
+    "annual": {
+      "starter": 12500,
+      "standard": 23000,
+      "scale": 43500
+    },
+    "month_to_month": {
+      "starter": 14300,
+      "standard": 26600,
+      "scale": 50700
+    }
+  },
+  "pilot": {
+    "name": "Founding-customer pilot",
+    "status": "draft for founder review before publication",
+    "price": 750,
+    "billing": "one-time, invoiced after scope and timing are confirmed",
+    "days": 30,
+    "product_families": 1,
+    "manuals": 3,
+    "manuals_note": "subject to scope review before acceptance",
+    "users": 3,
+    "evaluation_questions": 30,
+    "includes": [
+      "Guided onboarding",
+      "One end-of-pilot review"
+    ],
+    "credit": {
+      "amount": 750,
+      "toward": "the Knowledge Map setup fee",
+      "condition": "if the customer proceeds after the pilot"
+    },
+    "measures": [
+      "answer usefulness",
+      "source correctness",
+      "lookup time",
+      "repeated use"
+    ],
+    "no_automatic_subscription": true,
+    "no_automatic_charge": true
+  },
+  "external_figures": {
+    "_comment": "Dollar figures quoted from cited third-party sources, not Answerlore prices. Listed so the checker can tell them apart.",
+    "44,570": "Farm Equipment, Sounding the Alarm: Technician Shortage Hurts the Bottom Line"
+  },
+  "editorial_pages": {
+    "_comment": "Guides that print worked figures from cited sources rather than Answerlore prices. The dollar-figure check skips them; the other checks still run.",
+    "pages": [
+      "hold-time.html"
+    ]
+  }
+}

@@ -330,7 +330,7 @@ table.figures{width:100%;border-collapse:collapse;min-width:600px}
    HOME · the answer line
    ===================================================================== */
 .hero{padding:56px 0 0}
-.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);max-width:15ch;line-height:.98}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);max-width:19ch;line-height:1}
 .hero .sub{margin:26px 0 30px;max-width:56ch}
 .hero .cta-row{justify-content:flex-start}
 .line-stage{margin:64px 0 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
@@ -469,3 +469,115 @@ table.figures{width:100%;border-collapse:collapse;min-width:600px}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .ride-out,.anim-doc,.anim-tag,.steam,.anim-drop{opacity:1!important}
 }
+
+/* =====================================================================
+   2026-09-21 · walkthrough, benefits, request form states, pilot offer
+   ===================================================================== */
+/* ---------- illustrative walkthrough (home) ---------- */
+.walk{padding-top:0}
+.walk .stage{margin-top:28px;max-width:960px}
+.walk-label{display:flex;justify-content:center;margin-bottom:18px}
+.walk-label .eyebrow{--tone:var(--terra-text)}
+.walk .chips{margin-bottom:22px}
+.walk .doc{max-width:760px}
+.ans-h{font:500 11px/16px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px}
+.ans-h:first-of-type{margin-top:0}
+.answer ol{padding-left:22px;display:grid;gap:8px;margin-bottom:14px}
+.answer ol li{color:var(--body);font-size:15px;line-height:23px}
+.answer ol li::marker{font:500 13px var(--mono);color:var(--pine)}
+.answer .esc-list{list-style:none;display:grid;gap:6px;margin-bottom:14px;border-left:4px solid var(--straw);padding-left:14px}
+.answer .esc-list li{font-size:15px;line-height:23px;color:var(--body)}
+.conf{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:2px solid var(--line);padding-top:14px;margin-top:6px}
+.conf b{font:700 15px var(--sans);color:var(--ink)}
+.conf.is-high b{color:var(--pine-deep)}
+.conf.is-none b{color:var(--terra-text)}
+.conf span{font-size:14px;line-height:21px;color:var(--muted)}
+.src-toggle{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--sans);color:var(--pine);
+  background:var(--sage);border:1.5px solid var(--pine);border-radius:8px;padding:7px 12px;cursor:pointer;margin:2px 0 12px}
+.src-toggle:hover{background:#d4e8d9}
+.src-toggle[aria-expanded="true"]{background:var(--ink);color:var(--lime);border-color:var(--ink)}
+.src-toggle .mono{font:400 12px var(--mono)}
+.src-panel{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:18px 20px;margin:0 0 16px}
+.src-panel dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;font-size:13.5px;line-height:20px;margin-bottom:12px}
+.src-panel dt{font:500 11px/20px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.src-panel dd{color:var(--ink);font-family:var(--mono);font-size:13px;word-break:break-word}
+.src-panel blockquote{border-left:3px solid var(--straw);padding:2px 0 2px 14px;color:var(--body);font-size:14.5px;line-height:23px}
+.src-panel blockquote p+p{margin-top:8px}
+.src-panel .fine{margin-top:10px}
+.handoff{font:400 13px/20px var(--mono);color:var(--ink);background:var(--card);border:1.5px solid var(--line);
+  border-radius:10px;padding:14px 16px;white-space:pre-wrap;margin:8px 0 14px}
+.walk-foot{max-width:760px;margin:22px auto 0;text-align:center}
+.walk-foot p+p{margin-top:8px}
+
+/* ---------- benefits ---------- */
+.benefits .cards3{margin-top:32px}
+.benefits .cardi .num{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--pine);display:block;margin-bottom:14px}
+
+/* ---------- request forms: choice, status, email fallback ---------- */
+.choice{display:grid;gap:10px}
+.choice legend{font:600 14px var(--sans);color:var(--ink);margin-bottom:8px}
+.choice label{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--paper);
+  border:2px solid var(--ink);border-radius:14px;padding:14px 16px;cursor:pointer}
+.choice label:has(input:checked){background:var(--sage);border-color:var(--pine)}
+.choice label:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:3px}
+.choice input{margin-top:5px;width:18px;height:18px;accent-color:var(--pine)}
+.choice input:focus-visible{outline:none}
+.choice b{display:block;font:600 15px/22px var(--sans);color:var(--ink)}
+.choice span.d{display:block;font-size:13.5px;line-height:20px;color:var(--muted);margin-top:2px}
+.form fieldset{border:0;padding:0;margin:0;min-width:0}
+.form-status{border-radius:14px;padding:16px 18px;font-size:15px;line-height:23px}
+.form-status[data-state="error"]{background:var(--terra-tint);border:2px solid var(--terra);color:var(--terra-text)}
+.form-status[data-state="success"]{background:var(--sage);border:2px solid var(--pine);color:var(--pine-deep)}
+.form-status p+p{margin-top:8px}
+.form-status b{color:inherit}
+.form .btn[aria-busy="true"]{opacity:.7;cursor:progress}
+.form .btn[disabled]{cursor:not-allowed}
+.form-note .addr{font:500 14px var(--mono);color:var(--ink)}
+.copybtn{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--sans);color:var(--pine);background:var(--paper);
+  border:1.5px solid var(--pine);border-radius:8px;padding:5px 10px;cursor:pointer;margin-left:8px;vertical-align:middle}
+.copybtn:hover{background:var(--sage)}
+.copy-status{font-size:13px;color:var(--pine-deep);margin-left:8px}
+.field input:user-invalid,.field input[aria-invalid="true"]{border-color:var(--terra)}
+.field .err{font-size:13px;line-height:19px;color:var(--terra-text)}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:32px auto 0}
+.path{background:var(--paper);border:2px solid var(--ink);border-radius:22px;padding:26px 28px;box-shadow:var(--shadow)}
+.path .mlabel{display:block;margin-bottom:10px}
+.path h3{margin-bottom:10px}
+.path p{font-size:15px;line-height:24px;color:var(--body)}
+.path p+p{margin-top:10px}
+
+/* ---------- pilot offer ---------- */
+.pilot{background:var(--card);border:2px solid var(--ink);border-radius:32px;padding:44px 48px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:5fr 6fr;gap:44px;align-items:start}
+.pilot .price{font:800 44px/1 var(--disp);color:var(--ink);letter-spacing:-.03em;margin:16px 0 6px}
+.pilot .price span{display:block;font:500 15px/22px var(--sans);color:var(--muted);letter-spacing:0;margin-top:8px}
+.pilot ul{list-style:none;display:grid;gap:0}
+.pilot li{font-size:15px;line-height:23px;padding:10px 0;border-bottom:1.5px solid var(--line);display:flex;gap:10px;align-items:flex-start;color:var(--body)}
+.pilot li:last-child{border-bottom:none}
+.pilot li::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--pine);flex:none;margin-top:8px}
+.pilot .measure{background:var(--paper);border:2px solid var(--ink);border-radius:16px;padding:18px 20px;margin-top:18px}
+.pilot .measure p{font-size:14.5px;line-height:22px;color:var(--body)}
+.pilot .measure p+p{margin-top:8px}
+.pilot .btn{margin-top:22px}
+.pilot-mini{background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:22px 26px;max-width:520px;margin:28px auto 0}
+.pilot-mini p{font-size:14.5px;line-height:22px;color:var(--body)}
+.pilot-mini p+p{margin-top:8px}
+.founder-tag{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  border:1.5px solid var(--line);border-radius:999px;padding:6px 10px;margin-bottom:16px}
+
+@media (max-width:1023px){
+  .pilot{grid-template-columns:1fr;padding:32px 28px}
+  .paths{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .walk .stage{padding:18px 14px}
+  .walk .doc{padding:20px 16px}
+  .src-panel dl{grid-template-columns:1fr;gap:2px 0}
+  .src-panel dt{margin-top:8px}
+  .pilot{padding:26px 20px;border-radius:24px}
+  .pilot .price{font-size:36px}
+  .path{padding:22px 20px}
+}
+
+/* the hidden attribute wins over any author display rule */
+[hidden]{display:none!important}

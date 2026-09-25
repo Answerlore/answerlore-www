@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
-<title>Try it on a real manual · Answerlore</title>
-<meta name="description" content="Open a sample workspace pre-loaded with a real service manual, then send your own manuals. No credit card.">
+<title>Request a guided trial · Answerlore</title>
+<meta name="description" content="Request a guided trial: a session on the preloaded sample workspace, or a workspace we prepare from your own manuals. Access is assisted. No credit card.">
 <link rel="canonical" href="https://answerlore.com/start">
 <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png?v=5" sizes="32x32">
 <link rel="apple-touch-icon" href="/mark-256.png?v=5">
-<meta property="og:title" content="Try it on a real manual · Answerlore">
-<meta property="og:description" content="Open a sample workspace pre-loaded with a real service manual, then send your own manuals. No credit card.">
+<meta property="og:title" content="Request a guided trial · Answerlore">
+<meta property="og:description" content="Request a guided trial: a session on the preloaded sample workspace, or a workspace we prepare from your own manuals. Access is assisted. No credit card.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://answerlore.com/start">
 <meta property="og:site_name" content="Answerlore">
@@ -19,52 +19,77 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="site" aria-label="Site"><div class="wrap nav-in">
   <a class="brand" href="/"><svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#B9D6C1"/><g transform="translate(7,5) scale(0.9)" fill="none" stroke="#1C2420" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"><path d="M62 12 H20 A12 12 0 0 0 8 24 V60 A12 12 0 0 0 20 72 H30 V88 L56 72 H76 A12 12 0 0 0 88 60 V38 Z"/><path d="M62 12 V32 A6 6 0 0 0 68 38 H88"/></g></svg><span>Answerlore</span></a>
   <div class="nav-links"><a href="/how-it-works">How it works</a><a href="/why-it-refuses">Why it refuses</a><a href="/pricing">Pricing</a><a href="/resources">Resources</a><a href="https://app.answerlore.com/login">Sign in</a></div>
-  <a class="btn btn-primary" href="/start">Try it on a real manual</a>
+  <a class="btn btn-primary" href="/start" aria-current="page">Request a guided trial</a>
 </div></nav>
 <main id="main">
 <div class="wrap pagehead">
-  
-  <h1>Try it on a real manual.</h1>
-  <p class="sub">You'll be asking questions in about two minutes. The sample workspace is pre-loaded with a service manual; your own manuals can follow.</p>
-</div><section><div class="wrap">
-<form class="form" id="start-form" data-subject="Answerlore: sample workspace request" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
-  <input type="hidden" name="subject" value="Answerlore: sample workspace request">
-  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required></div>
-  <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="First and last" required></div>
-  <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Dealership or service company name" required></div>
-  <div class="field"><label for="equipment">What do you support?</label><span class="hint">Optional. Helps us load the right sample workspace.</span><input id="equipment" name="equipment" type="text" placeholder="e.g., ag equipment, commercial kitchens, HVAC"></div>
-  <button class="btn btn-primary" type="submit">Open the sample workspace</button>
-  <p class="form-note">No credit card. No sales call unless you book one.</p>
-  <p class="form-note" data-fallback hidden></p>
-</form>
+  <h1>Request a guided trial.</h1>
+  <p class="sub">Access is assisted: a person sets the workspace up with you and stays on the call for the first questions. Choose what you want to see, and we reply from hello@answerlore.com to schedule it.</p>
+</div>
+<section><div class="wrap">
+<form class="form" id="start-form" data-subject="Answerlore: guided trial request" data-event="trial_request_submitted" action="https://api.web3forms.com/submit" method="POST" novalidate>
+  <input type="hidden" name="access_key" value="0d824d5b-015d-42c8-8f36-7ffc5ba71ba8">
+  <input type="hidden" name="subject" value="Answerlore: guided trial request">
+  <input type="hidden" name="from_name" value="answerlore.com request form">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
+  <fieldset class="choice">
+    <legend>What would you like?</legend>
+    <label><input type="radio" name="request_type" value="sample" checked data-label="Guided session on the preloaded sample workspace" data-subject="Answerlore: guided trial on the sample workspace" data-event="trial_request_submitted">
+      <span><b>A guided session on the sample workspace</b><span class="d">Preloaded with the fictional Caldbeck manual from the home page. You ask, it answers, refuses, and cites. Nothing of yours is uploaded.</span></span></label>
+    <label><input type="radio" name="request_type" value="manuals" data-label="Workspace prepared from our own manuals" data-subject="Answerlore: guided trial on our manuals" data-event="trial_request_submitted">
+      <span><b>A workspace prepared from your manuals</b><span class="d">Send one to three PDFs. We ingest them, check the result by hand, and walk you through what it built before your technicians touch it.</span></span></label>
+    <label><input type="radio" name="request_type" value="pilot" data-label="Founding-customer pilot" data-subject="Answerlore: pilot request" data-event="pilot_request_submitted">
+      <span><b>The founding-customer pilot</b><span class="d">30 days, one product family, up to 3 manuals, up to 3 users, scored against 30 of your past questions. $750 once. <a class="quiet" href="/pricing#pilot">Terms &rarr;</a></span></span></label>
+  </fieldset>
+
+  <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="you@yourcompany.com" required autocomplete="email" aria-describedby="email-err"><span class="err" id="email-err" hidden>Enter a work email address so we can reply.</span></div>
+  <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Dealership or service company name" required autocomplete="organization" aria-describedby="company-err"><span class="err" id="company-err" hidden>Enter your company name.</span></div>
+  <div class="field"><label for="name">Your name</label><span class="hint">Optional.</span><input id="name" name="name" type="text" placeholder="First and last" autocomplete="name"></div>
+  <div class="field"><label for="equipment">What do you support?</label><span class="hint">Optional. Brands or equipment types help us prepare the right session.</span><input id="equipment" name="equipment" type="text" placeholder="e.g., ag equipment, commercial kitchens, HVAC"></div>
+
+  <button class="btn btn-primary" type="submit" data-live-label="Send the request">Email us to request a guided trial</button>
+  <p class="form-note" data-email-note>This button opens your email app with the answers above pre-filled; nothing is sent from this page. Or write to <span class="addr">hello@answerlore.com</span><button type="button" class="copybtn">Copy address</button><span class="copy-status" aria-live="polite"></span></p>
+  <p class="form-note" data-live-note hidden>Sent through our form service. You will see a confirmation on this page once it accepts the request.</p>
+  <p class="form-note">No credit card. No sales call unless you book one.</p>
+  <div class="form-status" hidden tabindex="-1"></div>
+</form>
 </div></section>
 
-<section><div class="wrap prose">
-  <span class="mlabel">What happens next</span>
-  <p><b>You get the sample workspace.</b> A real service manual for a DC-inverter air conditioner,
-     already ingested. Ask it anything. Two of the preset questions it can answer, one it can't. That
-     one matters most.</p>
-  <p><b>Then try yours.</b> Send the PDFs you have: service manuals, install guides, warranty policies.
-     Messy is fine; scanned is fine.</p>
-  <p><b>Ingestion is onboarding-assisted right now.</b> We'll have your workspace built within five
-     business days, and we'll show you exactly what it created, file by file, before your technicians
-     touch it. That is a person doing work, not a queue you're stuck in.</p>
+<section style="padding-top:0"><div class="wrap">
+  <h2 style="text-align:center">Two kinds of workspace. Both guided.</h2>
+  <div class="paths">
+    <div class="path">
+      <span class="mlabel">Sample workspace</span>
+      <h3>Preloaded. Fictional. Ready first.</h3>
+      <p>The Caldbeck X200/X250 workspace from the home page: an invented manufacturer and an invented service manual, ingested into topic docs the same way a real one would be. On the session you ask anything you like. Two of the preset questions it can answer, one it cannot, and that one matters most.</p>
+      <p>Because nothing of yours is involved, this is the quickest session to schedule.</p>
+    </div>
+    <div class="path">
+      <span class="mlabel">Your manuals</span>
+      <h3>Prepared from your PDFs. Checked by a person.</h3>
+      <p>Send one to three PDFs: service manuals, install guides, warranty policies. Messy is fine; scanned is fine. We ingest them, and a person checks every doc it built before you see it, file by file.</p>
+      <p>We confirm the session date after reviewing the manuals, because the check is real work and its length depends on the documents. We will not quote a turnaround we have not looked at.</p>
+    </div>
+  </div>
+  <div class="pilot-mini" data-offer="pilot">
+    <span class="mlabel">Founding-customer pilot</span>
+    <p style="margin-top:8px"><b>$750 once for a 30-day pilot.</b> One product family, up to 3 manuals (scope reviewed before acceptance), up to 3 participating users, evaluated against 30 agreed historical support questions, with guided onboarding and one end-of-pilot review. The $750 is credited toward the Knowledge Map setup fee if you proceed. No subscription starts and nothing is charged automatically; scope and timing are confirmed before any invoice.</p>
+    <p><a class="quiet" href="/pricing#pilot">Full pilot terms &rarr;</a></p>
+  </div>
 </div></section>
 
 <section><div class="wrap prose">
   <span class="mlabel">Ask the way you'd ask a senior tech</span>
   <p>&ldquo;Customer's X250 shows E04 and the flow looks normal&rdquo; works better than
-     keywords. <a class="quiet" href="/">See the demo on the homepage &rarr;</a></p>
+     keywords. <a class="quiet" href="/#walkthrough">See the worked example on the home page &rarr;</a></p>
 </div></section>
 
 </main>
@@ -75,6 +100,7 @@
   </div>
   <p class="foot-fine">&copy; Answerlore. No cookies beyond sign-in. No tracking pixels. <a href="mailto:hello@answerlore.com">hello@answerlore.com</a></p>
 </div></footer>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/measure.js?v=9" defer></script>
+<script src="/assets/site.js?v=9" defer></script>
 </body>
 </html>
